@@ -1,0 +1,97 @@
+  *{font-family:微软雅黑,Arial,Tahoma,sans-serif;}
+        ::selection {background:#ACD6FF;}
+    	div.banner{background-image: url('https://1.s140i.faiscm.com/2/AIwBCAAQAhgAINK_pfAFKMix8PAHMO4FOPoB.jpg');background-size:100%;}
+    	div.top{background-image: url('https://13511974.s21i.faiusr.com/4/3/ABUIABAEGAAglq-prQYojvb4uQQwjws4qwE.png');background-size:100% 100%;}
+    	div.mid{padding:5%;background:white;}
+    	div.foot{background: #fefefe;border-top:1px solid grey;color:black;text-align: center;padding:10px;font-size:13px;}
+    	span {margin-left:10px;}
+        a{text-decoration: none;}
+        a:visited {color: blue;}
+        a:hover{color:red;text-decoration: underline;}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0072E3;
+    width:100%;
+}
+
+li {
+    float: left;
+}
+
+li a:visited, a.dropbtn:visited {color: white;}
+
+li a, .dropbtn {color: white;
+    display: block;
+    text-align: center;
+    padding: 10px 12px;
+    line-height:100%;
+    text-decoration: none;
+    font-size:15px;
+}
+li a:hover, a.dropbtn:hover {color:white;text-decoration: none;background:#005AB5;}
+
+li a.active {background:#005AB5;color: white;}
+
+
+
+    		body{margin:0;width:800px;padding:0;}
+    		div.top{width:800px;height:96px;}
+    		div.banner{width:800px;height:120px;}
+
+p.banner {text-align: center;font-size:30px;padding-top:42px;color:white;margin: 0;}
+
+
+    	table
+{
+    border-collapse:collapse;
+}
+table,td
+{
+    border: 1px solid black;line-height:180%;
+}
+
+ .dropdown
+  {
+    display:inline-block;
+  }
+  
+  .dropdown-content
+  {
+    display:none;
+    position:absolute;
+    background-color:#005ab5;
+
+    
+  }
+  
+  .dropdown-content a
+  {
+    color:white;
+    padding:10px 12px;
+    text-decoration:none;
+    display:block;
+    font-size:15px;
+  }
+  
+  .dropdown-content a:hover {background-color: #0072E3;}
+  
+  .dropdown:hover .dropdown-content
+  {
+    display:block;
+  }
+
+td {padding:7px;}
+
+@media (max-width: 768px) {
+
+}
+
+@media (min-width: 768.1px) {
+   html {margin-left:25%;} 
+}
+
+p.yclj{text-align:right;padding-right:50px;font-size:13px;padding-top:40px;margin:0;}
