@@ -5,16 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/mian.css" rel="stylesheet">
     <style type="text/css">
-      
+      /* 轮播 */
+      .carousel_map {
+    width: 800px;
+    height: 450px;
+}
+.slide {
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    position: relative;margin:0;padding:0;
+}
+/* 鼠标放上去显示按钮 
+.slide:hover .labels {
+    display: flex;
+}
+.slide:hover .list {
+    animation: none;
+}
+.slide input {
+    display: none;
+}
+ 按钮位置 
+.labels {
+    position: absolute;
+    bottom: 0.5em;
+    z-index: 1;
+    width: inherit;
+    justify-content: center;
+    display: none;  鼠标移开隐藏按钮
+}
+按钮样式 
+.labels label {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin: 0 0.3rem;
+    border: 0.1rem solid #fff;
+    background-color: transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+} */
+/* 选择哪个按钮就有被点击的效果 */
+input[id=pic1]:checked ~ .labels label[for=pic1],
+input[id=pic2]:checked ~ .labels label[for=pic2],
+input[id=pic3]:checked ~ .labels label[for=pic3],
+input[id=pic4]:checked ~ .labels label[for=pic4] {
+    background-color: #fff;
+    border: 0.1rem solid #fff;
+}
+/* 按钮控件选择图片 */
+input[id=pic1]:checked ~ .list {
+    transform: translate(calc(0 * 800px));
+}
+input[id=pic2]:checked ~ .list {
+    transform: translate(calc(-1 * 800px));
+}   
+input[id=pic3]:checked ~ .list {
+    transform: translate(calc(-2 * 800px));
+}
+input[id=pic4]:checked ~ .list {
+    transform: translate(calc(-3 * 800px));
+}
+ul {
+    list-style: none;
+}
+.list {
+    width: calc(5 * 800px);
+    height: inherit;
+    position: relative;
+    /* 设置动画效果 */
+    animation: move 15s ease 1s infinite;
+    background: none;
+    margin:0;padding:0;
+}
+/* 动画关键帧轮播 */
+@keyframes move {
+    0% {
+        transform: translate(calc(0 * 800px));
+    }
+    25% {
+        transform: translate(calc(-1 * 800px));
+    }
+    50% {
+        transform: translate(calc(-2 * 800px));
+    }
+    75% {
+        transform: translate(calc(-3 * 800px));
+    }
+    100% {
+        transform: translate(calc(-4 * 800px));
+    }
+}
+.item {
+    width: 800px;
+    height: 450px;
+    float: left;
+    margin:0;padding:0;
+}
+
+div.dropdown-content {z-index: 999999;}
+wrrr{border-bottom:3px solid #0072e3;padding-bottom:10px;}
+p.bt {border-top:1px solid #f0f0f0;border-bottom:1px solid #f0f0f0;font-size:16px;line-height:260%;background: white;margin: 0;}
+div.lj{width:100%;display:inline-block;}
+div.lj a {padding:10px;padding-left:15px;width:inherit;}
+div.lj a:hover {background-color:#f0f0f0;text-decoration: none;color:black;}
+li.item  a{margin:0;padding:0;}
+
+a.more {color:black;text-decoration: none;font-size:12px;margin-left:10px;opacity: 0.6}
+a.more:hover {text-decoration: none;opacity: 0.9;}
     </style>
-	<title>网站建设中</title>
+	<title>CacoDote's Blog</title>
 </head>
 <body>
 <div class="top">
    <p class="yclj"><a href="https://space.bilibili.com/358743266" target="_blank"><img src="https://www.bilibili.com/favicon.ico" height="15px"> Follow me at Bilibili</a></p>
 </div>
 <ul>
-  <li><a class="active" href="/">首页</a></li>
+  <li><a href="/">首页</a></li>
 <div class="dropdown"><a class="dropbtn">全部作品</a>
   <div class="dropdown-content">
     <a href="/www-framework/1c/all.html">全部文章</a>
@@ -35,9 +143,90 @@
 
 </ul>
 
-<div class="mid">
-<img src="https://13511974.s21i.faiusr.com/4/3/ABUIABAEGAAg3O7prQYox7LZrgEwqQY4ywQ.png" width="100%">
+
+
+
+
+
+
+
+
+<div class="carousel_map">
+    <div class="slide">
+        <!--小圆点
+        <input type="radio" name="pic" id="pic1" checked/>
+        <input type="radio" name="pic" id="pic2"/>
+        <input type="radio" name="pic" id="pic3"/>
+        <input type="radio" name="pic" id="pic4"/>
+        <div class="labels">
+            <label for="pic1"></label>
+            <label for="pic2"></label>
+            <label for="pic3"></label>
+            <label for="pic4"></label>
+        </div>-->
+        <!--需要轮播的图片-->
+        <ul class="list">
+            <li class="item">
+                <a>
+                    <img src="https://13511974.s21i.faiusr.com/4/3/ABUIABAEGAAg-JvvrQYor7bUvQMw4AY49gM.png" style="height: 100%; width: 100%;"/>
+                </a>
+            </li>
+            <li class="item">
+                <a href="/www-framework/1c/changchun.html">
+                    <img src="https://13511974.s21i.faiusr.com/4/3/ABUIABAEGAAgiJ7vrQYo6PC6lwQw3Ac4qQU.png" style="height: 100%; width: 100%;"/>
+                </a>
+            </li>
+            <li class="item">
+                <a>
+                    <img src="https://13511974.s21i.faiusr.com/4/3/ABUIABAEGAAg-JvvrQYor7bUvQMw4AY49gM.png" style="height: 100%; width: 100%;"/>
+                </a>
+            </li>
+            <li class="item">
+                <a href="/www-framework/1c/changchun.html">
+                    <img src="https://13511974.s21i.faiusr.com/4/3/ABUIABAEGAAgiJ7vrQYo6PC6lwQw3Ac4qQU.png" style="height: 100%; width: 100%;"/>
+                </a>
+            </li>
+            <li class="item">
+                <a>
+                    <img src="https://13511974.s21i.faiusr.com/4/3/ABUIABAEGAAg-JvvrQYor7bUvQMw4AY49gM.png" style="height: 100%; width: 100%;"/>
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="bt"><wrrr>&nbsp&nbsp&nbsp最新文章<a class="more" href="/www-framework/1c/all.html" target="_blank">>>></a></wrrr></p>
+<div class="mid"></div>
+
+
+<p class="bt"><wrrr>&nbsp&nbsp&nbsp最新视频<a class="more" href="/www-framework/1c/all.html" target="_blank">>>></a></wrrr></p>
+<div class="mid"></div>
+<p class="bt"><wrrr>&nbsp&nbsp&nbsp友情链接<a class="more" href="#/" target="_blank">>>></a></wrrr></p>
+<div class="mid" style="padding: 15px;"><a href="https://www.baidu.com/" target="_blank">百度</a></div>
+
 <div class="foot">© 2022 Caco-Dote's Blog | Powered by <a href="/pc.html">Github</a>.</div>
 
 
