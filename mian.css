@@ -1,5 +1,5 @@
   *{font-family:微软雅黑,Arial,Tahoma,sans-serif;}
-        ::selection {background:#ACD6FF;}
+        ::selection {background:#40bbe1;color:white;}
     	div.banner{background-image: url('https://1.s140i.faiscm.com/2/AIwBCAAQAhgAINK_pfAFKMix8PAHMO4FOPoB.jpg');background-size:100%;}
     	div.top{background-image: url('https://13511974.s21i.faiusr.com/4/3/ABUIABAEGAAglq-prQYojvb4uQQwjws4qwE.png');background-size:100% 100%;}
     	div.mid{padding:5%;background:white;}
