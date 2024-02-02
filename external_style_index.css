@@ -1,0 +1,109 @@
+ /* 轮播 */
+      .carousel_map {
+    width: 800px;
+    height: 450px;
+}
+.slide {
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    position: relative;margin:0;padding:0;
+}
+/* 鼠标放上去显示按钮 
+.slide:hover .labels {
+    display: flex;
+}
+.slide:hover .list {
+    animation: none;
+}
+.slide input {
+    display: none;
+}
+ 按钮位置 
+.labels {
+    position: absolute;
+    bottom: 0.5em;
+    z-index: 1;
+    width: inherit;
+    justify-content: center;
+    display: none;  鼠标移开隐藏按钮
+}
+按钮样式 
+.labels label {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin: 0 0.3rem;
+    border: 0.1rem solid #fff;
+    background-color: transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+} */
+/* 选择哪个按钮就有被点击的效果 */
+input[id=pic1]:checked ~ .labels label[for=pic1],
+input[id=pic2]:checked ~ .labels label[for=pic2],
+input[id=pic3]:checked ~ .labels label[for=pic3],
+input[id=pic4]:checked ~ .labels label[for=pic4] {
+    background-color: #fff;
+    border: 0.1rem solid #fff;
+}
+/* 按钮控件选择图片 */
+input[id=pic1]:checked ~ .list {
+    transform: translate(calc(0 * 800px));
+}
+input[id=pic2]:checked ~ .list {
+    transform: translate(calc(-1 * 800px));
+}   
+input[id=pic3]:checked ~ .list {
+    transform: translate(calc(-2 * 800px));
+}
+input[id=pic4]:checked ~ .list {
+    transform: translate(calc(-3 * 800px));
+}
+ul {
+    list-style: none;
+}
+.list {
+    width: calc(5 * 800px);
+    height: inherit;
+    position: relative;
+    /* 设置动画效果 */
+    animation: move 15s ease 1s infinite;
+    background: none;
+    margin:0;padding:0;
+}
+/* 动画关键帧轮播 */
+@keyframes move {
+    0% {
+        transform: translate(calc(0 * 800px));
+    }
+    25% {
+        transform: translate(calc(-1 * 800px));
+    }
+    50% {
+        transform: translate(calc(-2 * 800px));
+    }
+    75% {
+        transform: translate(calc(-3 * 800px));
+    }
+    100% {
+        transform: translate(calc(-4 * 800px));
+    }
+}
+.item {
+    width: 800px;
+    height: 450px;
+    float: left;
+    margin:0;padding:0;
+}
+
+div.dropdown-content {z-index: 999999;}
+wrrr{border-bottom:3px solid #0072e3;padding-bottom:10px;}
+p.bt {border-top:1px solid #f0f0f0;border-bottom:1px solid #f0f0f0;font-size:16px;line-height:260%;background: white;margin: 0;}
+div.lj{width:100%;display:inline-block;}
+div.lj a {padding:10px;padding-left:15px;width:inherit;}
+div.lj a:hover {background-color:#f0f0f0;text-decoration: none;color:black;}
+li.item  a{margin:0;padding:0;}
+
+a.more {color:black;text-decoration: none;font-size:12px;margin-left:10px;opacity: 0.6}
+a.more:hover {text-decoration: none;opacity: 0.9;}
