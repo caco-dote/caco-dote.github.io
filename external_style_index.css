@@ -68,7 +68,7 @@ ul {
     height: inherit;
     position: relative;
     /* 设置动画效果 */
-    animation: move 5s ease 1s infinite;
+    animation: move 25s ease 1s infinite;
     background: none;
     margin:0;padding:0;
 }
