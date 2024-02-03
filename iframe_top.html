@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html style="width:800px;background:none;margin-left:0;">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://caco-dote.github.io/mian.css" rel="stylesheet">
+        <script>
+        function displayCurrentTime() {
+            var now = new Date();
+            var year = now.getFullYear();
+            var month = ("0" + (now.getMonth() + 1)).slice(-2); // 月从0开始计数，需要+1，并补零
+            var date = ("0" + now.getDate()).slice(-2);
+            var hours = ("0" + now.getHours()).slice(-2);
+            var minutes = ("0" + now.getMinutes()).slice(-2);
+            var seconds = ("0" + now.getSeconds()).slice(-2);
+
+            var formattedTime = `${year}年${month}月${date}日 ${hours}:${minutes}:${seconds}`;
+            document.getElementById("currentTime").textContent = "现在是" + formattedTime;
+        }
+        setInterval(displayCurrentTime, 1000);
+    </script>
+</head>
+<body style="">
+
+<div class="top">
+   <p class="yclj" id="currentTime">现在是1999年01月01日 00:00:00</p>
+</div>
+
+<ul>
+  <li><a href="/">首页</a></li>
+
+<div class="dropdown"><a class="dropbtn">全部作品</a>
+  <div class="dropdown-content">
+    <a href="/bg22/articles.html"  target="_parent">全部文章</a>
+      <a href="/bg22/videos.html"  target="_parent">全部视频</a>
+      <a href="/bg22/all.html"  target="_parent">全部作品</a>
+    </div>
+</div>
+
+<div class="dropdown"><a class="dropbtn">地铁图</a>
+  <div class="dropdown-content">
+      <a href="/bg22/changchun.html"  target="_parent">长春市</a>
+    </div>
+</div>
+
+<div class="dropdown"><a class="dropbtn">关于我们</a>
+  <div class="dropdown-content">
+      <a href="/bg22/about.html"  target="_parent">关于博主</a>
+    </div>
+</div>
+
+</ul>
+
+</body>
+</html>
