@@ -5,9 +5,9 @@
     	div.mid{padding:5%;background:white;}
     	div.foot{background: #fefefe;border-top:1px solid grey;color:black;text-align: center;padding:10px;font-size:13px;}
     	span {margin-left:10px;}
-        a{text-decoration: none;}
-        a:visited {color: blue;}
-        a:hover{color:red;text-decoration: underline;}
+        a{text-decoration: none;color:#0072E3;}
+        a:visited {color:#0072E3;}
+        a:hover{color:#005AB5;text-decoration: underline;}
 
 ul {
     list-style-type: none;
