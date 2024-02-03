@@ -4,24 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://caco-dote.github.io/mian.css" rel="stylesheet">
-        <script>
-       // 获取当前时间并格式化
-        function displayCurrentTime() {
-            var now = new Date();
-            var year = now.getFullYear();
-            var month = ("0" + (now.getMonth() + 1)).slice(-2); // 月从0开始计数，需要+1，并补零
-            var date = ("0" + now.getDate()).slice(-2);
-            var hours = ("0" + now.getHours()).slice(-2);
-            var minutes = ("0" + now.getMinutes()).slice(-2);
-            var seconds = ("0" + now.getSeconds()).slice(-2);
-
-            var formattedTime = `${year}年${month}月${date}日 ${hours}:${minutes}:${seconds}`;
-            document.getElementById("currentTime").textContent = "现在是" + formattedTime;
-        }
-
-        // 每秒调用一次displayCurrentTime函数以更新时间
-        setInterval(displayCurrentTime, 1000);
-    </script>
     <style type="text/css">
        div.ntfd{background-image: url('https://13511974.s21i.faiusr.com/4/ABUIABAEGAAg2dXxrQYos-XyyQYwjAc4qQU.png');background-size:100% 100%;width:800px;height:600px;margin:0;}
        p.ntfd {color:rgb(0, 69, 147);font-size:21px;text-align: center;margin:0;padding-top:340px;}
@@ -29,34 +11,15 @@
 	    span {margin:0;padding:0;}
        button.home {background-image: url('https://13511974.s21i.faiusr.com/4/ABUIABAEGAAg7NjxrQYooOrj2wcwrAE4Ow.png');background-size:100% 100%;border: none;height:40px;width:120px;cursor: pointer;}
        button.refresh {background-image: url('https://13511974.s21i.faiusr.com/4/ABUIABAEGAAg8djxrQYo0MDYFDCsATg7.png');background-size:100% 100%;border: none;height:40px;width:120px;margin-left:10px;cursor: pointer;}
+	    iframe.top:hover {height:252px;}
     </style>
 	<title>找不到页面|Caco-Dote's Blog</title>
 </head>
 <body>
-<div class="top">
-   <p class="yclj" id="currentTime">现在是1999年01月01日 00:00:00</p>
-</div>
-<ul>
-  <li><a href="/">首页</a></li>
-<div class="dropdown"><a class="dropbtn">全部作品</a>
-  <div class="dropdown-content">
-    <a href="/bg22/articles.html">全部文章</a>
-      <a href="/bg22/videos.html">全部视频</a>
-      <a href="/bg22/all.html">全部作品</a>
-    </div>
-</div>
-<div class="dropdown"><a class="dropbtn">地铁图</a>
-  <div class="dropdown-content">
-      <a href="/bg22/changchun.html">长春市</a>
-    </div>
-</div>
-<div class="dropdown"><a class="dropbtn">关于我们</a>
-  <div class="dropdown-content">
-      <a href="/bg22/about.html">关于博主</a>
-    </div>
+<iframe class="top" src="/iframe_top.html" scrolling="no" width="800px" height="132px" frameborder="0" style="position:absolute; top: 0;"></iframe>
+<div style="height:131px;">
 </div>
 
-</ul>
 
 
 
@@ -92,7 +55,8 @@
 
 </div>
 
-<div class="foot">© 2022 Caco-Dote's Blog | Powered by <a href="/pc.html">Github</a>.</div>
+<iframe src="/iframe_bottom.html" scrolling="no" width="800px" height="35px" frameborder="0"></iframe>
+
 
 
 
