@@ -9,7 +9,17 @@
 	    div.mid a {font-size:13px;}
 	    aspan {margin-left:10px;}
 	    iframe.top:hover {height:252px;}
+
+
+	       div.ad {position:fixed; top:0;left:0;width:100vw;margin:0;padding:0;background:yellow;color:black;text-align: center;}
+        div.ad span {padding:7px;color:white;background:slateblue;border-radius:7px;}
     </style>
+	<script type="text/javascript">
+        function closeElement() {
+            var element = document.getElementById("myElement"); // 获取指定id的元素
+            element.style.display = "none"; // 设置元素不显示（隐藏）
+        }
+    </script>
 	<title>Caco-Dote's Blog</title>
 </head>
 <body>
@@ -19,7 +29,10 @@
 </div>
 
 
-
+<div id="myElement" class="ad">
+        首页公告：自2023年年2月4日起，使用过于老旧的浏览器访问本站可能造成错误。
+        <span style="" onclick="closeElement()">关闭</span>
+    </div>
 
 
 
