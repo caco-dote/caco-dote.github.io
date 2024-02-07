@@ -22,14 +22,33 @@
      <style type="text/css">
       p.notice {position: absolute;top:0;text-align: center;width:800px;padding:3px;margin:0;background: red;color:white;font-size:12px;}
          p.yclj {font-family:Tahoma,sans-serif;}
-        
+         p.yclj a{color:black}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #EA0000	;
+    width:100%;
+}
+li a:hover, a.dropbtn:hover {color:white;text-decoration: none;background:#AE0000	;}
+li a.active {background:#AE0000	;color: white;} 
+  .dropdown-content
+  {
+    display:none;
+    position:absolute;
+    background-color:#AE0000	;  
+  } 
+  .dropdown-content a:hover {background-color: #EA0000	;}
+           
     </style>
 </head>
 <body style="background:none;">
 
 <div class="top">
      <!-- <p class="notice"><b>重要通知：</b> 自2024年2月4日起，使用过于老旧的浏览器访问本站可能会造成错误。</p> -->
-   <p class="yclj"><wenzi id="currentTime">现在是1999年01月01日 00:00:00</wenzi><br>天气组件无法正常加载
+   <p class="yclj"><wenzi id="currentTime">现在是1999年01月01日 00:00:00</wenzi><br><a href="javascript:alert('请在浏览器中设置');">设为首页</a> | <a  href="javascript:alert('Ctrl+D');">加入收藏</a> | <a  href="javascript:alert('share');">分享本站</a></p>
  <!--  <wenzi id="he-plugin-simple"></wenzi>
 <script>
 WIDGET = {
@@ -58,7 +77,6 @@ WIDGET = {
 </script>
 <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> -->
    
-   </p>
 </div>
 
 <ul>
